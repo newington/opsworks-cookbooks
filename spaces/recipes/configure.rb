@@ -3,7 +3,16 @@
 node[:deploy].each do |app_name, deploy_config|
 
   # use erb template
-  env_template_path = "#{deploy_config[:deploy_to]}/shared/config/settings/#{deploy_config[:rails_env]}.yml"
+
+  settings_folder = "#{deploy_config[:deploy_to]}/shared/config/settings"
+
+  directory settings_folder do
+    mode "0644"
+    group deploy_config[:group]
+    owner deploy_config[:user]
+  end
+
+  env_template_path = "#{settings_folder}/#{deploy_config[:rails_env]}.yml"
   template env_template_path do
     source "env_settings.yml.erb"
 
