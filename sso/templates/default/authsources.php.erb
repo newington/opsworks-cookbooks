@@ -1,0 +1,64 @@
+<?php
+$config = array(
+	// This is a authentication source which handles admin authentication.
+	'admin' => array(
+			// The default is to use core:AdminPassword, but it can be replaced with
+			// any authentication source.
+
+			'core:AdminPassword',
+	),
+	'main-ldap' => array(
+		'ldap:LDAP',
+
+		// Give the user an option to save their username for future login attempts
+		// And when enabled, what should the default be, to save the username or not
+		//'remember.username.enabled' => FALSE,
+		//'remember.username.checked' => FALSE,
+
+		// The hostname of the LDAP server.
+		'hostname' => '<%= @node[:deploy][:sso][:ldap_host] =%>',
+
+		// Whether SSL/TLS should be used when contacting the LDAP server.
+		'enable_tls' => FALSE,
+
+		'debug' => FALSE,
+
+		// The timeout for accessing the LDAP server, in seconds.
+		// The default is 0, which means no timeout.
+		'timeout' => 30,
+
+		// Which attributes should be retrieved from the LDAP server.
+		'attributes' => array('cn', 'sn', 'givenName', 'distinguishedName', 'displayName', 'memberOf', 'mailNickname', 'userPrincipalName', 'Mail', 'sAMAccountName', 'objectGUID'),
+
+		// The pattern which should be used to create the users DN given the username.
+		// %username% in this pattern will be replaced with the users username.
+		//
+		// This option is not used if the search.enable option is set to TRUE.
+		'dnpattern' => 'cn=%username%,ou=Services_Account,dc=newingtoncollege,dc=nsw,dc=edu,dc=au',
+
+		// As an alternative to specifying a pattern for the users DN, it is possible to
+		// search for the username in a set of attributes. This is enabled by this option.
+		'search.enable' => TRUE,
+		'search.base' => '<%= @node[:deploy][:sso][:ldap_search_base] =%>',
+
+		// The attribute(s) the username should match against.
+		//
+		// This is an array with one or more attribute names. Any of the attributes in
+		// the array may match the value the username.
+		'search.attributes' => array('uid', 'mail', 'samaccountname'),
+
+		// The username & password the simpleSAMLphp should bind to before searching. If
+		// this is left as NULL, no bind will be performed before searching.
+		'search.username' => '<%= @node[:deploy][:sso][:ldap_username] =%>',
+		'search.password' => '<%= @node[:deploy][:sso][:ldap_password]  =%>',
+
+		'priv.read' => TRUE,
+
+		// The DN & password the simpleSAMLphp should bind to before
+		// retrieving attributes. These options are required if
+		// 'priv.read' is set to TRUE.
+		'priv.username' => '<%= @node[:deploy][:sso][:ldap_username] =%>',
+		'priv.password' => '<%= @node[:deploy][:sso][:ldap_password] =%>',
+	),
+);
+?>

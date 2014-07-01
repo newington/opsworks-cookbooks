@@ -1,0 +1,2 @@
+name 'sso'
+depends 'composer'
