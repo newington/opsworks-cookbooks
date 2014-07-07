@@ -12,6 +12,8 @@ default[:deploy][:sso][:base_url] = "https://sso.newington.nsw.edu.au"
 default[:deploy][:sso][:contact] = "SSO Admin"
 default[:deploy][:sso][:email] = "ict@newington.nsw.edu.au"
 
+default[:deploy][:sso][:bugsnag] = ""
+
 default[:deploy][:sso][:ldap_search_base] = "OU=NC_Users,DC=newingtoncollege,DC=nsw,DC=edu,DC=au"
 default[:deploy][:sso][:ldap_host] = "ldap.newington.nsw.edu.au" #ldap.newington.nsw.edu.au?
 default[:deploy][:sso][:ldap_username] = "ldapservice"
