@@ -36,6 +36,14 @@ node[:deploy].each do |app_name, deploy_config|
     group "root"
   end
 
+  template "#{deploy_config[:deploy_to]}/current/config/module_authtest-endtoend.php" do
+    source "module_authtest-endtoend.php.erb"
+    mode 0644
+    owner "root"
+    group "root"
+  end
+
+
   template "#{deploy_config[:deploy_to]}/current/config/authsources.php" do
     source "authsources.php.erb"
     mode 0644

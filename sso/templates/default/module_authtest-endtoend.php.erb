@@ -1,0 +1,19 @@
+<?php
+$config = array(
+    /*
+     * Username to test the login with
+     */
+    'username' => '<%= @node[:deploy][:sso][:e2e_username] =%>',
+
+    /*
+     * SourceID to use
+     */
+    'sourceid' => 'main-ldap',
+
+    /*
+     * Password to test the login with
+     */
+    'password' => '<%= @node[:deploy][:sso][:e2e_password]  =%>',
+
+);
+?>

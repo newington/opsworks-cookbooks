@@ -18,6 +18,8 @@ default[:deploy][:sso][:ldap_search_base] = "OU=NC_Users,DC=newingtoncollege,DC=
 default[:deploy][:sso][:ldap_host] = "ldap.newington.nsw.edu.au" #ldap.newington.nsw.edu.au?
 default[:deploy][:sso][:ldap_username] = "ldapservice"
 default[:deploy][:sso][:ldap_password] = "some secure password"
+default[:deploy][:sso][:e2e_username] = "sso.svc"
+default[:deploy][:sso][:e2e_password] = "some secure password"
 
 default[:deploy][:sso][:password] = "some secure password"
 default[:deploy][:sso][:secretsalt] = "some secure password"
