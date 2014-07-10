@@ -263,5 +263,21 @@ $metadata['urn:federation:MicrosoftOnline'] = array (
   ),
 
 );
-
+$metadata['yammer.com'] = array (
+  'entityid' => 'yammer.com',
+  'AssertionConsumerService' => array (
+    0 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+      'Location' => 'https://saml.yammer.com/sp/ACS.saml2',
+      'index' => 0,
+    ),
+  ),
+  'attributes' => array('mail'),
+  'authproc' => array(
+    50 => array(
+      'class' => 'core:AttributeMap',
+      'mail' => 'SAML_SUBJECT'
+    ),
+  ),
+);
 ?>
