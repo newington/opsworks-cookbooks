@@ -15,9 +15,6 @@ start on runlevel [2345]
 stop  on shutdown
 
 # change to match your deployment user
-setuid deploy
-setgid deploy
-
 respawn
 respawn limit 3 30
 
@@ -33,6 +30,6 @@ exec /bin/bash <<EOT
 
   # pull in system rbenv
   cd <%= @app_config[:deploy_to] %>/current
-  exec bundle exec sidekiq -e <%= @app_config[:rails_env] %>
+  exec su deploy -c 'bundle exec sidekiq -e <%= @app_config[:rails_env] %>'
 EOT
 end script
