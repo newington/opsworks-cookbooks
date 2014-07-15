@@ -1,12 +1,12 @@
 # /etc/init/<%= @app_config[:application] %>-worker.conf - Sidekiq config
 
-# Save this config as /etc/init/<%= @app_config[:application] %>.conf then mange sidekiq with:
-#   sudo start <%= @app_config[:application] %>
-#   sudo stop <%= @app_config[:application] %>
-#   sudo status <%= @app_config[:application] %>
+# Save this config as /etc/init/<%= @app_config[:application] %>-worker.conf then mange sidekiq with:
+#   sudo start <%= @app_config[:application] %>-worker
+#   sudo stop <%= @app_config[:application] %>-worker
+#   sudo status <%= @app_config[:application] %>-worker
 #
 # or use the service command:
-#   sudo service <%= @app_config[:application] %> {start,stop,restart,status}
+#   sudo service <%= @app_config[:application] %>-worker {start,stop,restart,status}
 #
 
 description "<%= @app_config[:application] %> Background Worker"
