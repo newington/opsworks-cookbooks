@@ -1,0 +1,35 @@
+# /etc/init/<%= @app_config[:application] %>-worker.conf - Sidekiq config
+
+# Save this config as /etc/init/<%= @app_config[:application] %>-worker.conf then mange sidekiq with:
+#   sudo start <%= @app_config[:application] %>-worker
+#   sudo stop <%= @app_config[:application] %>-worker
+#   sudo status <%= @app_config[:application] %>-worker
+#
+# or use the service command:
+#   sudo service <%= @app_config[:application] %>-worker {start,stop,restart,status}
+#
+
+description "<%= @app_config[:application] %> Background Worker"
+
+start on runlevel [2345]
+stop  on shutdown
+
+# change to match your deployment user
+respawn
+respawn limit 3 30
+
+# TERM and USR1 are sent by sidekiqctl when stopping sidekiq.  Without declaring these as normal exit codes, it just respawns.
+normal exit 0 TERM USR1
+
+
+script
+# this script runs in /bin/sh by default
+exec /bin/bash <<EOT
+  # use syslog for logging
+  exec &> /dev/kmsg
+
+  # pull in system rbenv
+  cd <%= @app_config[:deploy_to] %>/current
+  exec su deploy -c 'bundle exec sidekiq -e <%= @app_config[:rails_env] %>'
+EOT
+end script
