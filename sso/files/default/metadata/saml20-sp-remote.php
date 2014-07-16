@@ -280,4 +280,13 @@ $metadata['yammer.com'] = array (
     ),
   ),
 );
+
+$metadata['https://icthelp.newington.nsw.edu.au/helpdesk/WebObjects/Helpdesk.woa'] = array (
+  'entityid' => 'https://icthelp.newington.nsw.edu.au/helpdesk/WebObjects/Helpdesk.woa',
+  'simplesaml.nameidattribute' => 'sAMAccountName',
+  'simplesaml.attributes' => FALSE,
+  'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:email',
+  'AssertionConsumerService' => 'https://icthelp.newington.nsw.edu.au/helpdesk/WebObjects/Helpdesk.woa',
+);
+
 ?>
