@@ -11,6 +11,6 @@ node[:deploy].each do |app_name, deploy_config|
 
   service "#{app_name}-worker" do
     provider Chef::Provider::Service::Upstart
-    action [ :enable, :start ]
+    action [ :enable, :restart ]
   end
 end
