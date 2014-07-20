@@ -5,7 +5,7 @@ node[:deploy].each do |app_name, deploy_config|
     minute "8"
     hour "7,9,11,13,15"
     weekday "1-5"
-    home "/var/www/spaces/current"
+    home "/srv/www/spaces/current"
     path "/usr/local/bin:/usr/bin:/bin"
   end
 
@@ -15,7 +15,7 @@ node[:deploy].each do |app_name, deploy_config|
     minute "45"
     hour "8,10,12,14,16,18"
     weekday "1-5"
-    home "/var/www/spaces/current"
+    home "/srv/www/spaces/current"
     path "/usr/local/bin:/usr/bin:/bin"
   end
 
@@ -25,7 +25,7 @@ node[:deploy].each do |app_name, deploy_config|
     minute "15"
     hour "8,10,12,14,16,18"
     weekday "1-5"
-    home "/var/www/spaces/current"
+    home "/srv/www/spaces/current"
     path "/usr/local/bin:/usr/bin:/bin"
   end
 
@@ -39,7 +39,7 @@ node[:deploy].each do |app_name, deploy_config|
     minute "10"
     hour "4"
     weekday "1-5"
-    home "/var/www/spaces/current"
+    home "/srv/www/spaces/current"
     path "/usr/local/bin:/usr/bin:/bin"
   end
 
@@ -49,7 +49,7 @@ node[:deploy].each do |app_name, deploy_config|
     minute "30"
     hour "4,12"
     weekday "1-5"
-    home "/var/www/spaces/current"
+    home "/srv/www/spaces/current"
     path "/usr/local/bin:/usr/bin:/bin"
   end
 
@@ -59,7 +59,7 @@ node[:deploy].each do |app_name, deploy_config|
     minute "20,50"
     hour "8-20"
     weekday "1-5"
-    home "/var/www/spaces/current"
+    home "/srv/www/spaces/current"
     path "/usr/local/bin:/usr/bin:/bin"
   end
 
@@ -69,7 +69,7 @@ node[:deploy].each do |app_name, deploy_config|
     minute "40"
     hour "8,11,14,17,20,23"
     weekday "1-5"
-    home "/var/www/spaces/current"
+    home "/srv/www/spaces/current"
     path "/usr/local/bin:/usr/bin:/bin"
   end
 end
