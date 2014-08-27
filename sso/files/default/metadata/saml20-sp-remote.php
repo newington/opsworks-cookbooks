@@ -289,4 +289,22 @@ $metadata['https://icthelp.newington.nsw.edu.au/helpdesk/WebObjects/Helpdesk.woa
   'AssertionConsumerService' => 'https://icthelp.newington.nsw.edu.au/helpdesk/WebObjects/Helpdesk.woa',
 );
 
+$metadata['https://shibboleth.clickview.com.au/shibboleth'] = array (
+  'entityid' => 'https://shibboleth.clickview.com.au/shibboleth',
+  'simplesaml.nameidattribute' => 'sAMAccountName',
+  'authproc' => array(
+    50 => array(
+      'class' => 'core:AttributeMap',
+      'name2oid'
+    )
+  ),
+  'AssertionConsumerService' => array (0 =>
+    array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+      'Location' => 'https://shibboleth.clickview.com.au/Shibboleth.sso/SAML2/POST',
+      'index' => 1,
+    ),
+  )
+);
+
 ?>
