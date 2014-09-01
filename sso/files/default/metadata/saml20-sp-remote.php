@@ -303,7 +303,7 @@ $metadata['https://shibboleth.clickview.com.au/shibboleth'] = array (
     ),
     50 => array(
       'class' => 'core:AttributeMap',
-      'name2urn'
+      'name2oid'
     )
   ),
   'AssertionConsumerService' => array (0 =>
