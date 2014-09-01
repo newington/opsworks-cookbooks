@@ -291,12 +291,9 @@ $metadata['https://icthelp.newington.nsw.edu.au/helpdesk/WebObjects/Helpdesk.woa
 
 $metadata['https://shibboleth.clickview.com.au/shibboleth'] = array (
   'entityid' => 'https://shibboleth.clickview.com.au/shibboleth',
+  'simplesaml.nameidattribute' => 'urn:oid:0.9.2342.19200300.100.1.3', // mail
+  'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:email',
   'authproc' => array(
-    3 => array(
-        'class' => 'saml:AttributeNameID',
-        'attribute' => 'mail',
-        'Format' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
-    ),
     40 => array(
       'class' => 'core:AttributeMap',
       'memberOf' => 'urn:oid:1.2.840.113556.1.2.102'
