@@ -315,6 +315,8 @@ $metadata['https://shibboleth.clickview.com.au/shibboleth'] = array (
 
 $metadata['https://newington.idm.oclc.org/shibboleth'] = array (
   'entityid' => 'https://newington.idm.oclc.org/shibboleth',
+  'signresponse' => TRUE,
+  'assertion.encryption' => TRUE,
   'AssertionConsumerService' => array (
     0 => array (
       'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
@@ -329,6 +331,8 @@ $metadata['https://newington.idm.oclc.org/shibboleth'] = array (
 
 $metadata['https://newington.idm.oclc.org:9443/shibboleth'] = array (
   'entityid' => 'https://newington.idm.oclc.org:9443/shibboleth',
+  'signresponse' => TRUE,
+  'assertion.encryption' => TRUE,
   'AssertionConsumerService' => array (
     0 => array (
       'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
