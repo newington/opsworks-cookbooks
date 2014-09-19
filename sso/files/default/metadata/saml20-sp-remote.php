@@ -327,4 +327,18 @@ $metadata['https://newington.idm.oclc.org/shibboleth'] = array (
   ),
 );
 
+$metadata['https://newington.idm.oclc.org:9443/shibboleth'] = array (
+  'entityid' => 'https://newington.idm.oclc.org:9443/shibboleth',
+  'AssertionConsumerService' => array (
+    0 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+      'Location' => 'https://login.newington.idm.oclc.org:9443/Shibboleth.sso/SAML2/POST',
+    ),
+    1 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact',
+      'Location' => 'https://login.newington.idm.oclc.org:9443/Shibboleth.sso/SAML2/Artifact',
+    ),
+  ),
+);
+
 ?>
