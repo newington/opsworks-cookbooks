@@ -313,4 +313,114 @@ $metadata['https://shibboleth.clickview.com.au/shibboleth'] = array (
   )
 );
 
+$metadata['https://newington.idm.oclc.org/shibboleth'] = array (
+  'entityid' => 'https://newington.idm.oclc.org/shibboleth',
+  'signresponse' => TRUE,
+  'assertion.encryption' => TRUE,
+  'simplesaml.nameidattribute' => 'sAMAccountName',
+  'NameIDFormat' => 'urn:oasis:names:tc:SAML:2.0:nameid-format:email',
+  'AssertionConsumerService' => array (
+    0 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+      'Location' => 'https://login.newington.idm.oclc.org/Shibboleth.sso/SAML2/POST',
+    ),
+    1 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact',
+      'Location' => 'https://login.newington.idm.oclc.org/Shibboleth.sso/SAML2/Artifact',
+    ),
+  ),
+ 'keys' => array (
+    0 => array (
+      'encryption' => true,
+      'signing' => true,
+      'type' => 'X509Certificate',
+      'X509Certificate' => 'MIIFgDCCBGigAwIBAgIQBlVRHFuAF+hquyINcct61jANBgkqhkiG9w0BAQsFADBw
+          MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+          d3cuZGlnaWNlcnQuY29tMS8wLQYDVQQDEyZEaWdpQ2VydCBTSEEyIEhpZ2ggQXNz
+          dXJhbmNlIFNlcnZlciBDQTAeFw0xNDA4MjIwMDAwMDBaFw0xNjA4MjYxMjAwMDBa
+          MIGEMQswCQYDVQQGEwJVUzENMAsGA1UECBMET2hpbzEPMA0GA1UEBxMGRHVibGlu
+          MTIwMAYDVQQKEylPQ0xDIE9ubGluZSBDb21wdXRlciBMaWJyYXJ5IENlbnRlciwg
+          SW5jLjEhMB8GA1UEAwwYKi5uZXdpbmd0b24uaWRtLm9jbGMub3JnMIIBIjANBgkq
+          hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnQfh+rOlCnNmT3jB61C0BwNAvcE9qc+x
+          kC8hs0TN+oGuSGJJxWmLQZhHPJOdIVqpp/3sO1sEUF7xEHkEaRR03tVG92bLyrtf
+          EzOa9dop0XSK4PlwcE7ae/f1hpygNYDUGtExS2JnSwzeX8KWzD/JIFjIPnF/DrHK
+          4E+rcQRApTtBaPO2o8s41zjwYd8nsfhNgypTgW8xZy7PA4Zr94w7YtOKIolFE3pr
+          CNdK5JMps1HhNOvpikqUgVyfsL/TMkfnBpTtu3Zxj+YJVpFZq/yKqoSqGgj1GvVD
+          cbosLExepTw8qAxmoPEv3vha8DLo3F2Lgh2FlCSFdxLPa+PglbgbjwIDAQABo4IB
+          /zCCAfswHwYDVR0jBBgwFoAUUWj/kK8CB3U8zNllZGKiErhZcjswHQYDVR0OBBYE
+          FKWi23SilZUH87OXaWhAUgNTWmGiMDsGA1UdEQQ0MDKCGCoubmV3aW5ndG9uLmlk
+          bS5vY2xjLm9yZ4IWbmV3aW5ndG9uLmlkbS5vY2xjLm9yZzAOBgNVHQ8BAf8EBAMC
+          BaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHUGA1UdHwRuMGwwNKAy
+          oDCGLmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZlci1nMi5j
+          cmwwNKAyoDCGLmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZl
+          ci1nMi5jcmwwQgYDVR0gBDswOTA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYc
+          aHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzCBgwYIKwYBBQUHAQEEdzB1MCQG
+          CCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wTQYIKwYBBQUHMAKG
+          QWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJIaWdoQXNz
+          dXJhbmNlU2VydmVyQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQAD
+          ggEBAB4yF3bc4DIBfKlDgoHKRTh02uzRdvtz6E+K6LVJ+keYeUccmTlr2CRYOu6J
+          8qS9VsEkv3UqVh6QwHiyLrVvko34PYEQrZz6ddW0KwjHzAs7363c+H1Wu+Q5VsV3
+          zCzgXyF79GhLty0AGsBCgbsJltr18Kan11WxgjYdf5BXnY3RFhQULE0yx3dAk2ld
+          VUn4Sb2pZ6Md3m71EWWgIpOY8li6539Tgdj8N4qPfPIdPeP4Um/BxY1YVU60U4fU
+          3LOOA8fqXNem3XnUAKFy5glD9oQ1C8HMcR/x1coHyfQGs2mjn3v66jS/DIf+hV9U
+          6FeCNuOGvygQVDlNBeFnEYj0f/4= ',
+    ),
+  ),
+);
+
+$metadata['https://newington.idm.oclc.org:9443/shibboleth'] = array (
+  'entityid' => 'https://newington.idm.oclc.org:9443/shibboleth',
+  'signresponse' => TRUE,
+  'assertion.encryption' => TRUE,
+  'simplesaml.nameidattribute' => 'sAMAccountName',
+  'NameIDFormat' => 'urn:oasis:names:tc:SAML:2.0:nameid-format:email',
+  'AssertionConsumerService' => array (
+    0 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+      'Location' => 'https://login.newington.idm.oclc.org:9443/Shibboleth.sso/SAML2/POST',
+    ),
+    1 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact',
+      'Location' => 'https://login.newington.idm.oclc.org:9443/Shibboleth.sso/SAML2/Artifact',
+    ),
+  ),
+ 'keys' => array (
+    0 => array (
+      'encryption' => true,
+      'signing' => true,
+      'type' => 'X509Certificate',
+      'X509Certificate' => 'MIIFgDCCBGigAwIBAgIQBlVRHFuAF+hquyINcct61jANBgkqhkiG9w0BAQsFADBw
+          MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+          d3cuZGlnaWNlcnQuY29tMS8wLQYDVQQDEyZEaWdpQ2VydCBTSEEyIEhpZ2ggQXNz
+          dXJhbmNlIFNlcnZlciBDQTAeFw0xNDA4MjIwMDAwMDBaFw0xNjA4MjYxMjAwMDBa
+          MIGEMQswCQYDVQQGEwJVUzENMAsGA1UECBMET2hpbzEPMA0GA1UEBxMGRHVibGlu
+          MTIwMAYDVQQKEylPQ0xDIE9ubGluZSBDb21wdXRlciBMaWJyYXJ5IENlbnRlciwg
+          SW5jLjEhMB8GA1UEAwwYKi5uZXdpbmd0b24uaWRtLm9jbGMub3JnMIIBIjANBgkq
+          hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnQfh+rOlCnNmT3jB61C0BwNAvcE9qc+x
+          kC8hs0TN+oGuSGJJxWmLQZhHPJOdIVqpp/3sO1sEUF7xEHkEaRR03tVG92bLyrtf
+          EzOa9dop0XSK4PlwcE7ae/f1hpygNYDUGtExS2JnSwzeX8KWzD/JIFjIPnF/DrHK
+          4E+rcQRApTtBaPO2o8s41zjwYd8nsfhNgypTgW8xZy7PA4Zr94w7YtOKIolFE3pr
+          CNdK5JMps1HhNOvpikqUgVyfsL/TMkfnBpTtu3Zxj+YJVpFZq/yKqoSqGgj1GvVD
+          cbosLExepTw8qAxmoPEv3vha8DLo3F2Lgh2FlCSFdxLPa+PglbgbjwIDAQABo4IB
+          /zCCAfswHwYDVR0jBBgwFoAUUWj/kK8CB3U8zNllZGKiErhZcjswHQYDVR0OBBYE
+          FKWi23SilZUH87OXaWhAUgNTWmGiMDsGA1UdEQQ0MDKCGCoubmV3aW5ndG9uLmlk
+          bS5vY2xjLm9yZ4IWbmV3aW5ndG9uLmlkbS5vY2xjLm9yZzAOBgNVHQ8BAf8EBAMC
+          BaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHUGA1UdHwRuMGwwNKAy
+          oDCGLmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZlci1nMi5j
+          cmwwNKAyoDCGLmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zaGEyLWhhLXNlcnZl
+          ci1nMi5jcmwwQgYDVR0gBDswOTA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYc
+          aHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzCBgwYIKwYBBQUHAQEEdzB1MCQG
+          CCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wTQYIKwYBBQUHMAKG
+          QWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJIaWdoQXNz
+          dXJhbmNlU2VydmVyQ0EuY3J0MAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQAD
+          ggEBAB4yF3bc4DIBfKlDgoHKRTh02uzRdvtz6E+K6LVJ+keYeUccmTlr2CRYOu6J
+          8qS9VsEkv3UqVh6QwHiyLrVvko34PYEQrZz6ddW0KwjHzAs7363c+H1Wu+Q5VsV3
+          zCzgXyF79GhLty0AGsBCgbsJltr18Kan11WxgjYdf5BXnY3RFhQULE0yx3dAk2ld
+          VUn4Sb2pZ6Md3m71EWWgIpOY8li6539Tgdj8N4qPfPIdPeP4Um/BxY1YVU60U4fU
+          3LOOA8fqXNem3XnUAKFy5glD9oQ1C8HMcR/x1coHyfQGs2mjn3v66jS/DIf+hV9U
+          6FeCNuOGvygQVDlNBeFnEYj0f/4= ',
+    ),
+  ),
+);
+
 ?>
