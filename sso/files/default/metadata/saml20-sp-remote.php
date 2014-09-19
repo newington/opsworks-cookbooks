@@ -422,5 +422,36 @@ $metadata['https://newington.idm.oclc.org:9443/shibboleth'] = array (
     ),
   ),
 );
+$metadata['newington.zoom.us'] = array (
+  'entityid' => 'newington.zoom.us',
+  'AssertionConsumerService' => array (
+    0 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect',
+      'Location' => 'https://newington.zoom.us/saml/SSO',
+      'index' => 0,
+      'isDefault' => true,),
+    1 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+      'Location' => 'https://newington.zoom.us/saml/SSO',
+      'index' => 1,
+    ),
+  ),
+  'SingleLogoutService' => array (
+    0 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect',
+      'Location' => 'https://newington.zoom.us/saml/SingleLogout',
+      'ResponseLocation' => 'https://newington.zoom.us/saml/SingleLogout',
+    ),
+    1 => array (
+      'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
+      'Location' => 'https://newington.zoom.us/saml/SingleLogout',
+      'ResponseLocation' => 'https://newington.zoom.us/saml/SingleLogout',
+    ),
+  ),
+  'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
+  'simplesaml.nameidattribute' => 'mail',
+  'validate.authnrequest' => false,
+  'saml20.sign.assertion' => true,
+);
 
 ?>
