@@ -80,7 +80,7 @@ $metadata['Synergetic Community Portal'] = array (
     ),
     1 => array (
       'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST',
-      'Location' => 'https://communitytest.newington.nsw.edu.au/login.aspx',
+      'Location' => 'https://community-test.newington.nsw.edu.au/login.aspx',
       'index' => 1,
     ),
     2 => array (
