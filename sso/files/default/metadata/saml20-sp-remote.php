@@ -69,6 +69,15 @@ $metadata['https://spacesbeta.newington.nsw.edu.au'] = array (
   // 'privatekey' => 'server.pem',
 );
 
+$metadata['http://localhost:3000'] = array ( // spaces dev
+  'entityid' => 'http://localhost:3000',
+  'simplesaml.nameidattribute' => 'sAMAccountName',
+  'simplesaml.attributes' => FALSE,
+  'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:email',
+  'AssertionConsumerService' => 'http://localhost:3000/saml/consume',
+  'SingleLogoutService' => 'http://localhost:3000/signout',
+);
+
 $metadata['Synergetic Community Portal'] = array (
   'entityid' => 'Synergetic Community Portal',
   'simplesaml.nameidattribute' => 'sAMAccountName',
